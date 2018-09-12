@@ -1,0 +1,18 @@
+@import 'node_modules/coffeekraken-sugar/index';
+@import '../../../index';
+
+@include s-setup(());
+@include s-init();
+@include s-classes();
+
+@include s-chip-classes(
+  $colors: default primary secondary success error warning info
+);
+
+.chip {
+  font-size: s-rem(12px);
+}
+
+body {
+	padding: s-space(bigger);
+}

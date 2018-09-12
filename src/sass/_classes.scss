@@ -1,0 +1,131 @@
+/**
+ * @name    component
+ * description
+ *
+ * @example   html
+ * <!-- example here -->
+ *
+ * @author    Olivier Bossel <olivier.bossel@gmail.com>
+ */
+
+/**
+ * Print out the bare and style component css
+ * Generated classes:
+ * - `.chip`
+ * - `.chip__addon`
+ * - `.chip__text`
+ * - `.chip--closable`
+ * - `.chip--{color}`
+ * @param 	{List<Color>} 		[$color=default primary secondary] 		The colors to generate
+ */
+@mixin s-chip-classes(
+  $colors: default primary secondary
+) {
+  @include s-chip-classes-bare();
+  @include s-chip-classes-style($colors);
+}
+
+/**
+ * Print out the bare component css
+ * Generated classes:
+ * - `.chip`
+ * - `.chip__addon`
+ * - `.chip__text`
+ */
+@mixin s-chip-classes-bare() {
+  @include s-component('chip') {
+    .#{s-component()} {
+      border-radius: (1em + s-lnf(padding-horizontal) * 2) / 2;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      width: auto;
+      height: 1em + s-lnf(padding-horizontal) * 2 + 0.15em;
+      vertical-align: middle;
+    }
+    .#{s-component()}__addon {
+      border-radius: 50%;
+      height: 1em + s-lnf(padding-horizontal) * 2 + 0.15em - 0.6em;
+      width: 1em + s-lnf(padding-horizontal) * 2 + 0.15em - 0.6em;
+      display: inline-block;
+      position: relative;
+      left: 0.3em;
+      // text-align: center;
+      // line-height: 1em + s-lnf(padding-horizontal) * 2 + 0.15em - 0.6em;
+      overflow: hidden;
+      flex: 0 auto;
+
+      &:first-child {
+        margin-right: s-lnf(padding-vertical) * 0.3 * -1;
+      }
+      &:last-child {
+        margin-left: s-lnf(padding-vertical) * 0.3 * -1;
+        left: auto;
+        right: 0.3em;
+      }
+
+      * {
+        position:absolute;
+        top:50%; left:50%;
+        @include s-translate(-50%, -50%);
+      }
+
+      img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+      }
+    }
+    .#{s-component()}__text {
+      padding: 0 s-lnf(padding-vertical);
+      flex: 0;
+      white-space: nowrap;
+    }
+  }
+}
+
+/**
+ * Print out the style component css
+ * Generated classes:
+ * - `.chip--closable`
+ * - `.chip--{color}`
+ * @param 	{List<Color>} 		[$color=default primary secondary] 		The colors to generate
+ */
+@mixin s-chip-classes-style(
+  $colors: default primary secondary
+) {
+  @include s-component('chip') {
+
+    .#{s-component()}__addon {
+      @include s-transition(fast);
+    }
+
+    .#{s-component()}--closable {
+
+      .#{s-component()}__addon {
+        cursor: pointer;
+
+        &:hover {
+          color: white;
+          background-color: s-color(error);
+        }
+      }
+    }
+
+    @each $color in $colors {
+      $sel : ".#{s-component()}--#{$color}";
+
+      @if $color == default {
+        $sel : ".#{s-component()}";
+      }
+
+      #{$sel} {
+        background-color: s-color($color);
+        color: white;
+
+        .#{s-component()}__addon {
+          background-color: s-color($color, -lighten 15%);
+        }
+      }
+    }
+  }
+}
