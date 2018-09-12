@@ -1,12 +1,12 @@
 {
-  "name": "coffeekraken-s-component-name-component",
+  "name": "coffeekraken-s-chip-component",
   "version": "1.0.0",
-  "description": "component-description",
+  "description": "Provide a nice and simple chip element",
   "main": "dist/index.js",
   "homepage": "http://coffeekraken.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/coffeekraken/s-{component-name}-component"
+    "url": "https://github.com/coffeekraken/s-chip-component"
   },
   "watch": {
     "doc:js": {

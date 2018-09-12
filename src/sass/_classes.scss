@@ -1,11 +1,18 @@
 /**
- * @name    component
- * description
+ * @name    s-chip-component
+ * Provide a nice and simple chip element
  *
  * @example   html
- * <!-- example here -->
+ * <span class="chip">
+ *   <span class="chip__text">
+ *     Hello World
+ *   </span>
+ *   <span class="chip__addon">
+ *     <i class="fa fa-user"></i>
+ *   </span>
+ * </span>
  *
- * @author    Olivier Bossel <olivier.bossel@gmail.com>
+ * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 
 /**
@@ -43,6 +50,7 @@
       height: 1em + s-lnf(padding-horizontal) * 2 + 0.15em;
       vertical-align: middle;
     }
+
     .#{s-component()}__addon {
       border-radius: 50%;
       height: 1em + s-lnf(padding-horizontal) * 2 + 0.15em - 0.6em;
@@ -58,6 +66,7 @@
       &:first-child {
         margin-right: s-lnf(padding-vertical) * 0.3 * -1;
       }
+
       &:last-child {
         margin-left: s-lnf(padding-vertical) * 0.3 * -1;
         left: auto;
@@ -65,16 +74,20 @@
       }
 
       * {
-        position:absolute;
-        top:50%; left:50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
         @include s-translate(-50%, -50%);
       }
 
       img {
-        width: 100%; height: 100%;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
       }
     }
+
     .#{s-component()}__text {
       padding: 0 s-lnf(padding-vertical);
       flex: 0;
@@ -94,13 +107,24 @@
   $colors: default primary secondary
 ) {
   @include s-component('chip') {
-
     .#{s-component()}__addon {
       @include s-transition(fast);
     }
 
+    /**
+     * @name    `.#{s-component()}.#{s-component()}--closable`
+     * Closable #{s-component()}
+     * @styleguide    Atoms / #{_start-case(s-component())}
+     * @example    html
+     * <span class="#{s-component()} #{s-component()}--closable">
+     *   <span class="#{s-component()}__text">
+     *     Hello World
+     *   </span>
+     *   <span class="#{s-component()}__addon"></span>
+     * </span>
+     * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+     */
     .#{s-component()}--closable {
-
       .#{s-component()}__addon {
         cursor: pointer;
 
@@ -118,6 +142,19 @@
         $sel : ".#{s-component()}";
       }
 
+      /**
+       * @name    <span class="c-#{$color}">#{_start-case($color)}</span> #{s-component()} `.#{s-component()}#{$sel}`
+       * #{_start-case($color)} #{s-component()}
+       * @styleguide    Atoms / #{_start-case(s-component())}
+       * @example    html
+       * <span class="#{s-component()} #{s-component()}--#{$color}">
+       *   <span class="#{s-component()}__text">
+       *     Hello World
+       *   </span>
+       *   <span class="#{s-component()}__addon"></span>
+       * </span>
+       * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+       */
       #{$sel} {
         background-color: s-color($color);
         color: white;

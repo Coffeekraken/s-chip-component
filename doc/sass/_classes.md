@@ -1,13 +1,20 @@
-# component
+# s-chip-component
 
-description
+Provide a nice and simple chip element
 
 
 ### Example
 ```html
-	<!-- example here -->
+	<span class="chip">
+  <span class="chip__text">
+    Hello World
+  </span>
+  <span class="chip__addon">
+    <i class="fa fa-user"></i>
+  </span>
+</span>
 ```
-Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com)
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 
 ## Mixins

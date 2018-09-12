@@ -4272,6 +4272,19 @@ body {
   outline-color: black;
 }
 
+/**
+     * @name    `.chip.chip--closable`
+     * Closable chip
+     * @styleguide    Atoms / Chip
+     * @example    html
+     * <span class="chip chip--closable">
+     *   <span class="chip__text">
+     *     Hello World
+     *   </span>
+     *   <span class="chip__addon"></span>
+     * </span>
+     * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+     */
 .chip--closable .chip__addon {
   cursor: pointer;
 }
@@ -4281,6 +4294,19 @@ body {
   background-color: #d9534f;
 }
 
+/**
+       * @name    <span class="c-default">Default</span> chip `.chip.chip`
+       * Default chip
+       * @styleguide    Atoms / Chip
+       * @example    html
+       * <span class="chip chip--default">
+       *   <span class="chip__text">
+       *     Hello World
+       *   </span>
+       *   <span class="chip__addon"></span>
+       * </span>
+       * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+       */
 .chip {
   background-color: #848e91;
   color: white;
@@ -4290,6 +4316,19 @@ body {
   background-color: #acb3b5;
 }
 
+/**
+       * @name    <span class="c-primary">Primary</span> chip `.chip.chip--primary`
+       * Primary chip
+       * @styleguide    Atoms / Chip
+       * @example    html
+       * <span class="chip chip--primary">
+       *   <span class="chip__text">
+       *     Hello World
+       *   </span>
+       *   <span class="chip__addon"></span>
+       * </span>
+       * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+       */
 .chip--primary {
   background-color: #f2bc2b;
   color: white;
@@ -4299,6 +4338,19 @@ body {
   background-color: #f6d373;
 }
 
+/**
+       * @name    <span class="c-secondary">Secondary</span> chip `.chip.chip--secondary`
+       * Secondary chip
+       * @styleguide    Atoms / Chip
+       * @example    html
+       * <span class="chip chip--secondary">
+       *   <span class="chip__text">
+       *     Hello World
+       *   </span>
+       *   <span class="chip__addon"></span>
+       * </span>
+       * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+       */
 .chip--secondary {
   background-color: #2b3438;
   color: white;
@@ -4308,6 +4360,19 @@ body {
   background-color: #4c5c63;
 }
 
+/**
+       * @name    <span class="c-success">Success</span> chip `.chip.chip--success`
+       * Success chip
+       * @styleguide    Atoms / Chip
+       * @example    html
+       * <span class="chip chip--success">
+       *   <span class="chip__text">
+       *     Hello World
+       *   </span>
+       *   <span class="chip__addon"></span>
+       * </span>
+       * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+       */
 .chip--success {
   background-color: #5cb85c;
   color: white;
@@ -4317,6 +4382,19 @@ body {
   background-color: #91cf91;
 }
 
+/**
+       * @name    <span class="c-error">Error</span> chip `.chip.chip--error`
+       * Error chip
+       * @styleguide    Atoms / Chip
+       * @example    html
+       * <span class="chip chip--error">
+       *   <span class="chip__text">
+       *     Hello World
+       *   </span>
+       *   <span class="chip__addon"></span>
+       * </span>
+       * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+       */
 .chip--error {
   background-color: #d9534f;
   color: white;
@@ -4326,6 +4404,19 @@ body {
   background-color: #e7908e;
 }
 
+/**
+       * @name    <span class="c-warning">Warning</span> chip `.chip.chip--warning`
+       * Warning chip
+       * @styleguide    Atoms / Chip
+       * @example    html
+       * <span class="chip chip--warning">
+       *   <span class="chip__text">
+       *     Hello World
+       *   </span>
+       *   <span class="chip__addon"></span>
+       * </span>
+       * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+       */
 .chip--warning {
   background-color: #f0ad4e;
   color: white;
@@ -4335,6 +4426,19 @@ body {
   background-color: #f6ce95;
 }
 
+/**
+       * @name    <span class="c-info">Info</span> chip `.chip.chip--info`
+       * Info chip
+       * @styleguide    Atoms / Chip
+       * @example    html
+       * <span class="chip chip--info">
+       *   <span class="chip__text">
+       *     Hello World
+       *   </span>
+       *   <span class="chip__addon"></span>
+       * </span>
+       * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+       */
 .chip--info {
   background-color: #2199e8;
   color: white;

@@ -1,68 +1,84 @@
-# Coffeekraken s-{component-name}-component <img src=".resources/coffeekraken-logo.jpg" height="25px" />
+# Coffeekraken s-chip-component <img src=".resources/coffeekraken-logo.jpg" height="25px" />
 
 <p>
-	<!-- <a href="https://travis-ci.org/{repository-path}">
-		<img src="https://img.shields.io/travis/{repository-path}.svg?style=flat-square" />
+	<!-- <a href="https://travis-ci.org/coffeekraken/s-chip-component">
+		<img src="https://img.shields.io/travis/coffeekraken/s-chip-component.svg?style=flat-square" />
 	</a> -->
-	<a href="https://www.npmjs.com/package/{npm-package-name}">
-		<img src="https://img.shields.io/npm/v/{npm-package-name}.svg?style=flat-square" />
+	<a href="https://www.npmjs.com/package/coffeekraken-s-chip-component">
+		<img src="https://img.shields.io/npm/v/coffeekraken-s-chip-component.svg?style=flat-square" />
 	</a>
-	<a href="https://github.com/{repository-path}/blob/master/LICENSE.txt">
-		<img src="https://img.shields.io/npm/l/{npm-package-name}.svg?style=flat-square" />
+	<a href="https://github.com/coffeekraken/s-chip-component/blob/master/LICENSE.txt">
+		<img src="https://img.shields.io/npm/l/coffeekraken-s-chip-component.svg?style=flat-square" />
 	</a>
-	<!-- <a href="https://github.com/{repository-path}">
-		<img src="https://img.shields.io/npm/dt/{npm-package-name}.svg?style=flat-square" />
+	<!-- <a href="https://github.com/coffeekraken/s-chip-component">
+		<img src="https://img.shields.io/npm/dt/coffeekraken-s-chip-component.svg?style=flat-square" />
 	</a>
-	<a href="https://github.com/{repository-path}">
-		<img src="https://img.shields.io/github/forks/{repository-path}.svg?style=social&label=Fork&style=flat-square" />
+	<a href="https://github.com/coffeekraken/s-chip-component">
+		<img src="https://img.shields.io/github/forks/coffeekraken/s-chip-component.svg?style=social&label=Fork&style=flat-square" />
 	</a>
-	<a href="https://github.com/{repository-path}">
-		<img src="https://img.shields.io/github/stars/{repository-path}.svg?style=social&label=Star&style=flat-square" />
+	<a href="https://github.com/coffeekraken/s-chip-component">
+		<img src="https://img.shields.io/github/stars/coffeekraken/s-chip-component.svg?style=social&label=Star&style=flat-square" />
 	</a> -->
-	<a href="https://twitter.com/{twitter-username}">
-		<img src="https://img.shields.io/twitter/url/http/{twitter-username}.svg?style=social&style=flat-square" />
+	<a href="https://twitter.com/coffeekrakenio">
+		<img src="https://img.shields.io/twitter/url/http/coffeekrakenio.svg?style=social&style=flat-square" />
 	</a>
 	<a href="http://coffeekraken.io">
 		<img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=flat-square&label=coffeekraken.io&colorB=f2bc2b&style=flat-square" />
 	</a>
 </p>
 
-{component-description}
+Provide a nice and simple chip element
 
 ## Table of content
 
-1. **[Demo](http://components.coffeekraken.io/app/s-{component-name}-component)**
+1. **[Demo](http://components.coffeekraken.io/app/s-chip-component)**
 2. [Install](#readme-install)
 3. [Get Started](#readme-get-started)
-4. [Javascript API](doc/js)
-5. [SASS API](doc/sass)
-6. [Sugar Web Components Documentation](https://github.com/coffeekraken/sugar/blob/master/doc/webcomponent.md)
-7. [Browsers support](#readme-browsers-support)
-8. [Code linting](#readme-code-linting)
-9. [Contribute](#readme-contribute)
-10. [Who are Coffeekraken?](#readme-who-are-coffeekraken)
-11. [Licence](#readme-license)
+4. [SASS API](doc/sass)
+5. [Sugar Web Components Documentation](https://github.com/coffeekraken/sugar/blob/master/doc/webcomponent.md)
+6. [Browsers support](#readme-browsers-support)
+7. [Code linting](#readme-code-linting)
+8. [Contribute](#readme-contribute)
+9. [Who are Coffeekraken?](#readme-who-are-coffeekraken)
+10. [Licence](#readme-license)
 
 <a name="readme-install"></a>
 ## Install
 
 ```
-npm install coffeekraken-s-{component-name}-component --save
+npm install coffeekraken-s-chip-component --save
 ```
 
 <a name="readme-get-started"></a>
 ## Get Started
 
-First, import the component into your javascript file like so:
+First, import the component into your sass file and generate the classes like so:
 
-```js
-import ComponentName from 'coffeekraken-s-{component-name}-component'
+```scss
+@import 'node_modules/coffeekraken-s-chip-component/index';
+@include s-chip-classes(
+  $colors: default primary secondary
+);
 ```
 
 Then simply use it inside your html like so:
 
 ```html
-<s-{component-name}></s-{component-name}>
+<!-- default chip -->
+<span class="chip">
+  <span class="chip__text">Hello World</span>
+  <span class="chip__addon">
+    <i class="fa fa-user"></i>
+  </span>
+</span>
+
+<!-- colored one -->
+<span class="chip--primary">
+  <span class="chip__addon">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="chip__text">Hello World</span>
+</span>
 ```
 
 <a id="readme-browsers-support"></a>
