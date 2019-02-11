@@ -42,19 +42,19 @@
 @mixin s-chip-classes-bare() {
   @include s-component('chip') {
     .#{s-component()} {
-      border-radius: (1em + s-lnf(padding-horizontal) * 2) / 2;
+      border-radius: (1em + s-lnf(padding-horizontal)) / 2;
       position: relative;
       display: inline-flex;
       align-items: center;
       width: auto;
-      height: 1em + s-lnf(padding-horizontal) * 2 + 0.15em;
+      height: 1em + s-lnf(padding-horizontal) + 0.15em;
       vertical-align: middle;
     }
 
     .#{s-component()}__addon {
       border-radius: 50%;
-      height: 1em + s-lnf(padding-horizontal) * 2 + 0.15em - 0.6em;
-      width: 1em + s-lnf(padding-horizontal) * 2 + 0.15em - 0.6em;
+      height: 1em + s-lnf(padding-horizontal) + 0.15em - 0.6em;
+      width: 1em + s-lnf(padding-horizontal) + 0.15em - 0.6em;
       display: inline-block;
       position: relative;
       left: 0.3em;
@@ -64,11 +64,11 @@
       flex: 0 auto;
 
       &:first-child {
-        margin-right: s-lnf(padding-vertical) * 0.3 * -1;
+        margin-right: s-lnf(padding-vertical) * 0.1;
       }
 
       &:last-child {
-        margin-left: s-lnf(padding-vertical) * 0.3 * -1;
+        margin-left: s-lnf(padding-vertical) * 0.1;
         left: auto;
         right: 0.3em;
       }
@@ -89,7 +89,7 @@
     }
 
     .#{s-component()}__text {
-      padding: 0 s-lnf(padding-vertical);
+      padding: 0 s-lnf(padding-vertical) * 0.5;
       flex: 0;
       white-space: nowrap;
     }
