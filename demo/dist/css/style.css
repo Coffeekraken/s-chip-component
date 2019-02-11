@@ -2663,13 +2663,20 @@
  * @author 			Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 /**
- * @name    component
- * description
+ * @name    s-chip-component
+ * Provide a nice and simple chip element
  *
  * @example   html
- * <!-- example here -->
+ * <span class="chip">
+ *   <span class="chip__text">
+ *     Hello World
+ *   </span>
+ *   <span class="chip__addon">
+ *     <i class="fa fa-user"></i>
+ *   </span>
+ * </span>
  *
- * @author    Olivier Bossel <olivier.bossel@gmail.com>
+ * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 /**
  * Print out the bare and style component css
@@ -4218,19 +4225,19 @@ body {
 }
 
 .chip {
-  border-radius: 1.3em;
+  border-radius: 0.9em;
   position: relative;
   display: inline-flex;
   align-items: center;
   width: auto;
-  height: 2.75em;
+  height: 1.95em;
   vertical-align: middle;
 }
 
 .chip__addon {
   border-radius: 50%;
-  height: 2.15em;
-  width: 2.15em;
+  height: 1.35em;
+  width: 1.35em;
   display: inline-block;
   position: relative;
   left: 0.3em;
@@ -4239,11 +4246,11 @@ body {
 }
 
 .chip__addon:first-child {
-  margin-right: -0.42em;
+  margin-right: 0.14em;
 }
 
 .chip__addon:last-child {
-  margin-left: -0.42em;
+  margin-left: 0.14em;
   left: auto;
   right: 0.3em;
 }
@@ -4262,7 +4269,7 @@ body {
 }
 
 .chip__text {
-  padding: 0 1.4em;
+  padding: 0 0.7em;
   flex: 0;
   white-space: nowrap;
 }
@@ -4446,10 +4453,6 @@ body {
 
 .chip--info .chip__addon {
   background-color: #66b9ef;
-}
-
-.chip {
-  font-size: 0.85714rem;
 }
 
 body {

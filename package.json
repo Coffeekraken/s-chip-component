@@ -1,6 +1,6 @@
 {
   "name": "coffeekraken-s-chip-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provide a nice and simple chip element",
   "main": "dist/index.js",
   "homepage": "http://coffeekraken.io",
